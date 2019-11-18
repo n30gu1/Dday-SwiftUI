@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2BFAFCF238159B100FCA3D1 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */; };
 		B2D2142623813858003B90BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142523813858003B90BE /* AppDelegate.swift */; };
 		B2D2142823813858003B90BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142723813858003B90BE /* SceneDelegate.swift */; };
 		B2D2142B23813858003B90BE /* Dday_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142923813858003B90BE /* Dday_SwiftUI.xcdatamodeld */; };
@@ -14,9 +15,11 @@
 		B2D2142F23813859003B90BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D2142E23813859003B90BE /* Assets.xcassets */; };
 		B2D2143223813859003B90BE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2D2143123813859003B90BE /* Preview Assets.xcassets */; };
 		B2D2143523813859003B90BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2D2143323813859003B90BE /* LaunchScreen.storyboard */; };
+		B2D2143D238141E6003B90BE /* AddDdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2143C238141E6003B90BE /* AddDdayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 		B2D2142223813858003B90BE /* Dday-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dday-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D2142523813858003B90BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D2142723813858003B90BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		B2D2143123813859003B90BE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2D2143423813859003B90BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2D2143623813859003B90BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2D2143C238141E6003B90BE /* AddDdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDdayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				B2D2142523813858003B90BE /* AppDelegate.swift */,
 				B2D2142723813858003B90BE /* SceneDelegate.swift */,
 				B2D2142C23813858003B90BE /* ContentView.swift */,
+				B2D2143C238141E6003B90BE /* AddDdayView.swift */,
+				B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */,
 				B2D2142E23813859003B90BE /* Assets.xcassets */,
 				B2D2143323813859003B90BE /* LaunchScreen.storyboard */,
 				B2D2143623813859003B90BE /* Info.plist */,
@@ -149,7 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2D2143D238141E6003B90BE /* AddDdayView.swift in Sources */,
 				B2D2142B23813858003B90BE /* Dday_SwiftUI.xcdatamodeld in Sources */,
+				B2BFAFCF238159B100FCA3D1 /* DateExtention.swift in Sources */,
 				B2D2142623813858003B90BE /* AppDelegate.swift in Sources */,
 				B2D2142D23813858003B90BE /* ContentView.swift in Sources */,
 				B2D2142823813858003B90BE /* SceneDelegate.swift in Sources */,
@@ -290,7 +298,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Dday-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = YNUMMC3WK3;
+				DEVELOPMENT_TEAM = T2N2Q99XZR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Dday-SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Dday-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = YNUMMC3WK3;
+				DEVELOPMENT_TEAM = T2N2Q99XZR;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Dday-SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
