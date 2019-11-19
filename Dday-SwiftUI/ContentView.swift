@@ -10,7 +10,10 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Dday.entity(), sortDescriptors: []) var ddays: FetchedResults<Dday>
+    @FetchRequest(entity: Dday.entity(), sortDescriptors:
+        [NSSortDescriptor(key: "startFromDayOne", ascending: true),
+        NSSortDescriptor(key: "date", ascending: true)]
+    ) var ddays: FetchedResults<Dday>
     
     @State private var showAddView = false
     
@@ -20,21 +23,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(self.ddays, id: \.self) { dday in
-                    HStack() {
-                        Text(dday.title ?? "D-Day")
-                        Spacer()
-                        if dday.startFromDayOne {
-                            Text("D+\(self.calcDate(date: dday.date))")
-                        } else {
-                            if self.calcDate(date: dday.date) < 0 {
-                                Text("D\(self.calcDate(date: dday.date))")
-                            } else if self.calcDate(date: dday.date) == 0 {
-                                Text("D-Day")
-                            } else {
-                                Text("D+\(self.calcDate(date: dday.date))")
-                            }
-                        }
-                    }
+                    DdayRow(title: dday.title, date: dday.date, sfdo: dday.startFromDayOne)
                 }
                 .onDelete { indexPath in
                     let target = self.ddays[indexPath.first!]
@@ -53,10 +42,6 @@ struct ContentView: View {
                     AddDdayView().environment(\.managedObjectContext, self.moc)
             }
         }
-    }
-    
-    func calcDate(date: Date?) -> Int {
-        return date!.totalDistance(from: self.today, resultIn: .day)!
     }
 }
 

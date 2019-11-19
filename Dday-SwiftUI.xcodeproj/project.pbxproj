@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B24C2FDC2382CE90004364CB /* DdayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C2FDB2382CE90004364CB /* DdayRow.swift */; };
 		B2BFAFCF238159B100FCA3D1 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */; };
 		B2D2142623813858003B90BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142523813858003B90BE /* AppDelegate.swift */; };
 		B2D2142823813858003B90BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142723813858003B90BE /* SceneDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B24C2FDB2382CE90004364CB /* DdayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayRow.swift; sourceTree = "<group>"; };
 		B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 		B2D2142223813858003B90BE /* Dday-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dday-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D2142523813858003B90BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				B2D2142C23813858003B90BE /* ContentView.swift */,
 				B2D2143C238141E6003B90BE /* AddDdayView.swift */,
 				B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */,
+				B24C2FDB2382CE90004364CB /* DdayRow.swift */,
 				B2D2142E23813859003B90BE /* Assets.xcassets */,
 				B2D2143323813859003B90BE /* LaunchScreen.storyboard */,
 				B2D2143623813859003B90BE /* Info.plist */,
@@ -161,6 +164,7 @@
 				B2D2142623813858003B90BE /* AppDelegate.swift in Sources */,
 				B2D2142D23813858003B90BE /* ContentView.swift in Sources */,
 				B2D2142823813858003B90BE /* SceneDelegate.swift in Sources */,
+				B24C2FDC2382CE90004364CB /* DdayRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

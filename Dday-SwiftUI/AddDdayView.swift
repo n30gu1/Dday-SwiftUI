@@ -12,13 +12,6 @@ struct AddDdayView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
     
-    var dateFormatter: DateFormatter {
-        let formatter = DateFormatter()
-        formatter.dateStyle = .long
-        formatter.locale = Locale(identifier: "ko_KR")
-        return formatter
-    }
-    
     @State private var title = ""
     @State private var date = Date()
     @State private var startFromDayOne = true
@@ -57,12 +50,12 @@ struct AddDdayView: View {
                     TextField("디데이 제목", text: $title)
                 }
                 Section(header: Text("날짜 선택")) {
-                    DatePicker(selection: $date, in: startFromDayOne ? rangeWhenTrue : rangeWhenFalse, displayedComponents: .date) {
-                        Text("")
-                    }.labelsHidden()
                     Toggle(isOn: $startFromDayOne) {
                         Text("1일부터 시작")
                     }
+                    DatePicker(selection: $date, in: startFromDayOne ? rangeWhenTrue : rangeWhenFalse, displayedComponents: .date) {
+                        Text("")
+                    }.labelsHidden()
                 }
             }
         .navigationBarTitle("디데이 추가")
