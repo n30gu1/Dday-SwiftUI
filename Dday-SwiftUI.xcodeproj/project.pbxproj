@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B201071423A4D6CB003FD2CC /* Dday.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201071323A4D6CB003FD2CC /* Dday.swift */; };
 		B24C2FDC2382CE90004364CB /* DdayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C2FDB2382CE90004364CB /* DdayRow.swift */; };
 		B2BFAFCF238159B100FCA3D1 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */; };
 		B2D2142623813858003B90BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142523813858003B90BE /* AppDelegate.swift */; };
@@ -20,9 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B201071323A4D6CB003FD2CC /* Dday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dday.swift; sourceTree = "<group>"; };
+		B238326124624B0C003703D2 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B24C2FDB2382CE90004364CB /* DdayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayRow.swift; sourceTree = "<group>"; };
 		B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
-		B2D2142223813858003B90BE /* Dday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dday.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2D2142223813858003B90BE /* SimpleDday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D2142523813858003B90BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2D2142723813858003B90BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B2D2142A23813858003B90BE /* Dday_SwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dday_SwiftUI.xcdatamodel; sourceTree = "<group>"; };
@@ -56,7 +59,7 @@
 		B2D2142323813858003B90BE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2D2142223813858003B90BE /* Dday.app */,
+				B2D2142223813858003B90BE /* SimpleDday.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +73,7 @@
 				B2D2143C238141E6003B90BE /* AddDdayView.swift */,
 				B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */,
 				B24C2FDB2382CE90004364CB /* DdayRow.swift */,
+				B201071323A4D6CB003FD2CC /* Dday.swift */,
 				B2D2142E23813859003B90BE /* Assets.xcassets */,
 				B2D2143323813859003B90BE /* LaunchScreen.storyboard */,
 				B2D2143623813859003B90BE /* Info.plist */,
@@ -104,7 +108,7 @@
 			);
 			name = "Dday-SwiftUI";
 			productName = "Dday-SwiftUI";
-			productReference = B2D2142223813858003B90BE /* Dday.app */;
+			productReference = B2D2142223813858003B90BE /* SimpleDday.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -129,6 +133,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ko,
 			);
 			mainGroup = B2D2141923813858003B90BE;
 			productRefGroup = B2D2142323813858003B90BE /* Products */;
@@ -165,6 +170,7 @@
 				B2D2142D23813858003B90BE /* ContentView.swift in Sources */,
 				B2D2142823813858003B90BE /* SceneDelegate.swift in Sources */,
 				B24C2FDC2382CE90004364CB /* DdayRow.swift in Sources */,
+				B201071423A4D6CB003FD2CC /* Dday.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +181,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B2D2143423813859003B90BE /* Base */,
+				B238326124624B0C003703D2 /* ko */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -186,6 +193,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -246,6 +254,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -303,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Dday-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = T2N2Q99XZR;
+				DEVELOPMENT_TEAM = 98882K9P37;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Dday-SwiftUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -312,8 +321,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "kr.n30gu1.Dday-SwiftUI";
-				PRODUCT_NAME = Dday;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.n30gu1.Dday-SwiftUI";
+				PRODUCT_NAME = SimpleDday;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -326,7 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Dday-SwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = T2N2Q99XZR;
+				DEVELOPMENT_TEAM = 98882K9P37;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Dday-SwiftUI/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -335,8 +344,8 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "kr.n30gu1.Dday-SwiftUI";
-				PRODUCT_NAME = Dday;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.n30gu1.Dday-SwiftUI";
+				PRODUCT_NAME = SimpleDday;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

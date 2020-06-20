@@ -57,6 +57,7 @@ struct DdayRow: View {
 
 struct DdayRow_Previews: PreviewProvider {
     static var previews: some View {
-        DdayRow(title: Optional("D-Day"), date: Date(), sfdo: true)
+        DdayRow(title: "title", date: Date(), sfdo: true)
+            .previewLayout(.fixed(width: 375, height: 50))
     }
 }

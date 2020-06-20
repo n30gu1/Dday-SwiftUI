@@ -7,13 +7,11 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Dday.entity(), sortDescriptors:
-        [NSSortDescriptor(key: "startFromDayOne", ascending: true),
-        NSSortDescriptor(key: "date", ascending: true)]
-    ) var ddays: FetchedResults<Dday>
+    @FetchRequest(fetchRequest: Dday.fetchAllItems()) var ddays: FetchedResults<Dday>
     
     @State private var showAddView = false
     
@@ -22,13 +20,17 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(self.ddays, id: \.self) { dday in
+                ForEach(ddays) { dday in
                     DdayRow(title: dday.title, date: dday.date, sfdo: dday.startFromDayOne)
                 }
                 .onDelete { indexPath in
                     let target = self.ddays[indexPath.first!]
                     self.moc.delete(target)
-                    try? self.moc.save()
+                    do {
+                    	try self.moc.save()
+                    } catch {
+                    	print(error)
+                    }
                 }
             }
             .navigationBarTitle("디데이 목록")
@@ -46,7 +48,8 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     static var previews: some View {
-        ContentView()
+        ContentView().environment(\.managedObjectContext, (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
     }
 }
