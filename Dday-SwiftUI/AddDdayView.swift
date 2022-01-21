@@ -55,17 +55,19 @@ struct AddDdayView: View {
                     }
                     DatePicker(selection: $date, in: startFromDayOne ? rangeWhenTrue : rangeWhenFalse, displayedComponents: .date) {
                         Text("")
-                    }.labelsHidden()
+                    }
+                        .datePickerStyle(.wheel)
+                        .labelsHidden()
                 }
             }
-        .navigationBarTitle("디데이 추가")
+            .navigationBarTitle("디데이 추가")
             .navigationBarItems(leading: Button("취소") {
                 self.presentationMode.wrappedValue.dismiss()
             }, trailing: Button("저장") {
                 if self.title != "" {
                     let newDday = Dday(context: self.moc)
                     newDday.title = self.title
-                    newDday.date = self.date
+                    newDday.date = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: self.date)
                     newDday.startFromDayOne = self.startFromDayOne
                     
                     try? self.moc.save()
@@ -74,9 +76,9 @@ struct AddDdayView: View {
                     self.showAlert.toggle()
                 }
             })
-                .alert(isPresented: $showAlert) {
-                    Alert(title: Text("제목 없음"), message: Text("제목을 입력하세요."), dismissButton: .default(Text("확인")))
-                }
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("제목 없음"), message: Text("제목을 입력하세요."), dismissButton: .default(Text("확인")))
+            }
         }
     }
 }

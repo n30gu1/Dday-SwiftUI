@@ -15,8 +15,6 @@ struct ContentView: View {
     
     @State private var showAddView = false
     
-    let today = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: Date())!
-    
     var body: some View {
         NavigationView {
             List {
@@ -27,12 +25,13 @@ struct ContentView: View {
                     let target = self.ddays[indexPath.first!]
                     self.moc.delete(target)
                     do {
-                    	try self.moc.save()
+                        try self.moc.save()
                     } catch {
-                    	print(error)
+                        print(error)
                     }
                 }
             }
+            .listStyle(.plain)
             .navigationBarTitle("디데이 목록")
             .navigationBarItems(leading: EditButton(), trailing: Button(action: {self.showAddView.toggle()}) {
                 HStack {
@@ -40,8 +39,8 @@ struct ContentView: View {
                     Image(systemName: "plus")
                 }
             })
-                .sheet(isPresented: $showAddView) {
-                    AddDdayView().environment(\.managedObjectContext, self.moc)
+            .sheet(isPresented: $showAddView) {
+                AddDdayView().environment(\.managedObjectContext, self.moc)
             }
         }
     }

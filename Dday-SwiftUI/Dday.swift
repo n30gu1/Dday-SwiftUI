@@ -18,8 +18,7 @@ extension Dday {
     static func fetchAllItems() -> NSFetchRequest<Dday> {
         let request: NSFetchRequest<Dday> = Dday.fetchRequest() as! NSFetchRequest<Dday>
         
-        request.sortDescriptors = [NSSortDescriptor(key: "startFromDayOne", ascending: true), NSSortDescriptor(key: "date", ascending: true)]
-          
+        request.sortDescriptors = []
         return request
     }
 }
