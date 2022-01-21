@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B201071423A4D6CB003FD2CC /* Dday.swift in Sources */ = {isa = PBXBuildFile; fileRef = B201071323A4D6CB003FD2CC /* Dday.swift */; };
+		B22B12B5279AA75200CFAE18 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22B12B4279AA75200CFAE18 /* CloudKit.framework */; };
+		B22B12BB279AA82500CFAE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B12BA279AA82500CFAE18 /* Assets.xcassets */; };
+		B22B12C1279AA82500CFAE18 /* WatchDday WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B22B12C0279AA82500CFAE18 /* WatchDday WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B22B12C6279AA82500CFAE18 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B12C5279AA82500CFAE18 /* ContentView.swift */; };
+		B22B12C8279AA82500CFAE18 /* Dday_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B12C7279AA82500CFAE18 /* Dday_SwiftUIApp.swift */; };
+		B22B12CA279AA82500CFAE18 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B12C9279AA82500CFAE18 /* ComplicationController.swift */; };
+		B22B12CC279AA82600CFAE18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B12CB279AA82600CFAE18 /* Assets.xcassets */; };
+		B22B12CF279AA82600CFAE18 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B22B12CE279AA82600CFAE18 /* Preview Assets.xcassets */; };
+		B22B12D3279AA82600CFAE18 /* WatchDday.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B22B12B8279AA82300CFAE18 /* WatchDday.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B22B12E1279ABFF800CFAE18 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B12DF279ABFF800CFAE18 /* Persistence.swift */; };
+		B22B12E2279AC01800CFAE18 /* Dday_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142923813858003B90BE /* Dday_SwiftUI.xcdatamodeld */; };
+		B22B12E6279AC54000CFAE18 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22B12E5279AC54000CFAE18 /* CloudKit.framework */; };
+		B22B12E8279AC93600CFAE18 /* Dday.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B12E7279AC93600CFAE18 /* Dday.swift */; };
+		B22B12E9279AC93600CFAE18 /* Dday.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B12E7279AC93600CFAE18 /* Dday.swift */; };
+		B22B12EC279ACB5E00CFAE18 /* ComplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B12EA279ACB5D00CFAE18 /* ComplicationsView.swift */; };
+		B22B12ED279ACFB500CFAE18 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */; };
 		B24C2FDC2382CE90004364CB /* DdayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C2FDB2382CE90004364CB /* DdayRow.swift */; };
 		B2BFAFCF238159B100FCA3D1 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */; };
 		B2D2142623813858003B90BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142523813858003B90BE /* AppDelegate.swift */; };
@@ -20,8 +35,65 @@
 		B2D2143D238141E6003B90BE /* AddDdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2143C238141E6003B90BE /* AddDdayView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B22B12C2279AA82500CFAE18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2D2141A23813858003B90BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B22B12BF279AA82500CFAE18;
+			remoteInfo = "WatchDday WatchKit Extension";
+		};
+		B22B12D1279AA82600CFAE18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2D2141A23813858003B90BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B22B12B7279AA82300CFAE18;
+			remoteInfo = WatchDday;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B22B12D7279AA82600CFAE18 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B22B12C1279AA82500CFAE18 /* WatchDday WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B22B12DB279AA82600CFAE18 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B22B12D3279AA82600CFAE18 /* WatchDday.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		B201071323A4D6CB003FD2CC /* Dday.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dday.swift; sourceTree = "<group>"; };
+		B22B12B2279AA74E00CFAE18 /* Dday-SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Dday-SwiftUI.entitlements"; sourceTree = "<group>"; };
+		B22B12B4279AA75200CFAE18 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		B22B12B8279AA82300CFAE18 /* WatchDday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDday.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22B12BA279AA82500CFAE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B22B12C0279AA82500CFAE18 /* WatchDday WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WatchDday WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B22B12C5279AA82500CFAE18 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B22B12C7279AA82500CFAE18 /* Dday_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dday_SwiftUIApp.swift; sourceTree = "<group>"; };
+		B22B12C9279AA82500CFAE18 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		B22B12CB279AA82600CFAE18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B22B12CE279AA82600CFAE18 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B22B12D0279AA82600CFAE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B22B12DF279ABFF800CFAE18 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		B22B12E4279AC53B00CFAE18 /* WatchDday WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchDday WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		B22B12E5279AC54000CFAE18 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS8.3.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		B22B12E7279AC93600CFAE18 /* Dday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dday.swift; sourceTree = "<group>"; };
+		B22B12EA279ACB5D00CFAE18 /* ComplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationsView.swift; sourceTree = "<group>"; };
 		B238326124624B0C003703D2 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B24C2FDB2382CE90004364CB /* DdayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayRow.swift; sourceTree = "<group>"; };
 		B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
@@ -38,21 +110,74 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B22B12BD279AA82500CFAE18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22B12E6279AC54000CFAE18 /* CloudKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2D2141F23813858003B90BE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B22B12B5279AA75200CFAE18 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B22B12B3279AA75200CFAE18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B22B12E5279AC54000CFAE18 /* CloudKit.framework */,
+				B22B12B4279AA75200CFAE18 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B22B12B9279AA82400CFAE18 /* WatchDday */ = {
+			isa = PBXGroup;
+			children = (
+				B22B12BA279AA82500CFAE18 /* Assets.xcassets */,
+			);
+			path = WatchDday;
+			sourceTree = "<group>";
+		};
+		B22B12C4279AA82500CFAE18 /* WatchDday WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B22B12E4279AC53B00CFAE18 /* WatchDday WatchKit Extension.entitlements */,
+				B22B12C5279AA82500CFAE18 /* ContentView.swift */,
+				B22B12C7279AA82500CFAE18 /* Dday_SwiftUIApp.swift */,
+				B22B12C9279AA82500CFAE18 /* ComplicationController.swift */,
+				B22B12DF279ABFF800CFAE18 /* Persistence.swift */,
+				B22B12EA279ACB5D00CFAE18 /* ComplicationsView.swift */,
+				B22B12CB279AA82600CFAE18 /* Assets.xcassets */,
+				B22B12D0279AA82600CFAE18 /* Info.plist */,
+				B22B12CD279AA82600CFAE18 /* Preview Content */,
+			);
+			path = "WatchDday WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B22B12CD279AA82600CFAE18 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B22B12CE279AA82600CFAE18 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		B2D2141923813858003B90BE = {
 			isa = PBXGroup;
 			children = (
 				B2D2142423813858003B90BE /* Dday-SwiftUI */,
+				B22B12B9279AA82400CFAE18 /* WatchDday */,
+				B22B12C4279AA82500CFAE18 /* WatchDday WatchKit Extension */,
 				B2D2142323813858003B90BE /* Products */,
+				B22B12B3279AA75200CFAE18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				B2D2142223813858003B90BE /* SimpleDday.app */,
+				B22B12B8279AA82300CFAE18 /* WatchDday.app */,
+				B22B12C0279AA82500CFAE18 /* WatchDday WatchKit Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,13 +194,14 @@
 		B2D2142423813858003B90BE /* Dday-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				B22B12B2279AA74E00CFAE18 /* Dday-SwiftUI.entitlements */,
 				B2D2142523813858003B90BE /* AppDelegate.swift */,
 				B2D2142723813858003B90BE /* SceneDelegate.swift */,
 				B2D2142C23813858003B90BE /* ContentView.swift */,
 				B2D2143C238141E6003B90BE /* AddDdayView.swift */,
 				B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */,
 				B24C2FDB2382CE90004364CB /* DdayRow.swift */,
-				B201071323A4D6CB003FD2CC /* Dday.swift */,
+				B22B12E7279AC93600CFAE18 /* Dday.swift */,
 				B2D2142E23813859003B90BE /* Assets.xcassets */,
 				B2D2143323813859003B90BE /* LaunchScreen.storyboard */,
 				B2D2143623813859003B90BE /* Info.plist */,
@@ -94,6 +222,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B22B12B7279AA82300CFAE18 /* WatchDday */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B22B12D8279AA82600CFAE18 /* Build configuration list for PBXNativeTarget "WatchDday" */;
+			buildPhases = (
+				B22B12B6279AA82300CFAE18 /* Resources */,
+				B22B12D7279AA82600CFAE18 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B22B12C3279AA82500CFAE18 /* PBXTargetDependency */,
+			);
+			name = WatchDday;
+			productName = WatchDday;
+			productReference = B22B12B8279AA82300CFAE18 /* WatchDday.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B22B12BF279AA82500CFAE18 /* WatchDday WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B22B12D4279AA82600CFAE18 /* Build configuration list for PBXNativeTarget "WatchDday WatchKit Extension" */;
+			buildPhases = (
+				B22B12BC279AA82500CFAE18 /* Sources */,
+				B22B12BD279AA82500CFAE18 /* Frameworks */,
+				B22B12BE279AA82500CFAE18 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchDday WatchKit Extension";
+			productName = "WatchDday WatchKit Extension";
+			productReference = B22B12C0279AA82500CFAE18 /* WatchDday WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		B2D2142123813858003B90BE /* Dday-SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2D2143923813859003B90BE /* Build configuration list for PBXNativeTarget "Dday-SwiftUI" */;
@@ -101,10 +263,12 @@
 				B2D2141E23813858003B90BE /* Sources */,
 				B2D2141F23813858003B90BE /* Frameworks */,
 				B2D2142023813858003B90BE /* Resources */,
+				B22B12DB279AA82600CFAE18 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B22B12D2279AA82600CFAE18 /* PBXTargetDependency */,
 			);
 			name = "Dday-SwiftUI";
 			productName = "Dday-SwiftUI";
@@ -117,10 +281,16 @@
 		B2D2141A23813858003B90BE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
 				ORGANIZATIONNAME = n30gu1;
 				TargetAttributes = {
+					B22B12B7279AA82300CFAE18 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					B22B12BF279AA82500CFAE18 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					B2D2142123813858003B90BE = {
 						CreatedOnToolsVersion = 11.2;
 					};
@@ -141,11 +311,30 @@
 			projectRoot = "";
 			targets = (
 				B2D2142123813858003B90BE /* Dday-SwiftUI */,
+				B22B12B7279AA82300CFAE18 /* WatchDday */,
+				B22B12BF279AA82500CFAE18 /* WatchDday WatchKit Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B22B12B6279AA82300CFAE18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22B12BB279AA82500CFAE18 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B22B12BE279AA82500CFAE18 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22B12CF279AA82600CFAE18 /* Preview Assets.xcassets in Resources */,
+				B22B12CC279AA82600CFAE18 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2D2142023813858003B90BE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -159,6 +348,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B22B12BC279AA82500CFAE18 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22B12C6279AA82500CFAE18 /* ContentView.swift in Sources */,
+				B22B12E9279AC93600CFAE18 /* Dday.swift in Sources */,
+				B22B12ED279ACFB500CFAE18 /* DateExtention.swift in Sources */,
+				B22B12EC279ACB5E00CFAE18 /* ComplicationsView.swift in Sources */,
+				B22B12E1279ABFF800CFAE18 /* Persistence.swift in Sources */,
+				B22B12E2279AC01800CFAE18 /* Dday_SwiftUI.xcdatamodeld in Sources */,
+				B22B12C8279AA82500CFAE18 /* Dday_SwiftUIApp.swift in Sources */,
+				B22B12CA279AA82500CFAE18 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2D2141E23813858003B90BE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,11 +374,24 @@
 				B2D2142D23813858003B90BE /* ContentView.swift in Sources */,
 				B2D2142823813858003B90BE /* SceneDelegate.swift in Sources */,
 				B24C2FDC2382CE90004364CB /* DdayRow.swift in Sources */,
-				B201071423A4D6CB003FD2CC /* Dday.swift in Sources */,
+				B22B12E8279AC93600CFAE18 /* Dday.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B22B12C3279AA82500CFAE18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B22B12BF279AA82500CFAE18 /* WatchDday WatchKit Extension */;
+			targetProxy = B22B12C2279AA82500CFAE18 /* PBXContainerItemProxy */;
+		};
+		B22B12D2279AA82600CFAE18 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B22B12B7279AA82300CFAE18 /* WatchDday */;
+			targetProxy = B22B12D1279AA82600CFAE18 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B2D2143323813859003B90BE /* LaunchScreen.storyboard */ = {
@@ -189,6 +406,126 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B22B12D5279AA82600CFAE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "WatchDday WatchKit Extension/WatchDday WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchDday WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 98882K9P37;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchDday WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WatchDday WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchDday_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 n30gu1. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.n30gu1.Dday-SwiftUI.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		B22B12D6279AA82600CFAE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_ENTITLEMENTS = "WatchDday WatchKit Extension/WatchDday WatchKit Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchDday WatchKit Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = 98882K9P37;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "WatchDday WatchKit Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WatchDday WatchKit Extension";
+				INFOPLIST_KEY_CLKComplicationPrincipalClass = WatchDday_WatchKit_Extension.ComplicationController;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 n30gu1. All rights reserved.";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.n30gu1.Dday-SwiftUI.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
+		B22B12D9279AA82600CFAE18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98882K9P37;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = WatchDday_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchDday;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.n30gu1.Dday-SwiftUI";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.n30gu1.Dday-SwiftUI.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Debug;
+		};
+		B22B12DA279AA82600CFAE18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 98882K9P37;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = WatchDday_WatchKit_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchDday;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.n30gu1.Dday-SwiftUI";
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.n30gu1.Dday-SwiftUI.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.3;
+			};
+			name = Release;
+		};
 		B2D2143723813859003B90BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -216,6 +553,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -240,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -277,6 +615,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -295,7 +634,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -309,13 +648,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Dday-SwiftUI/Dday-SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dday-SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 98882K9P37;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Dday-SwiftUI/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,13 +672,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Dday-SwiftUI/Dday-SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Dday-SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 98882K9P37;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Dday-SwiftUI/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,6 +695,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B22B12D4279AA82600CFAE18 /* Build configuration list for PBXNativeTarget "WatchDday WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B22B12D5279AA82600CFAE18 /* Debug */,
+				B22B12D6279AA82600CFAE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B22B12D8279AA82600CFAE18 /* Build configuration list for PBXNativeTarget "WatchDday" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B22B12D9279AA82600CFAE18 /* Debug */,
+				B22B12DA279AA82600CFAE18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B2D2141D23813858003B90BE /* Build configuration list for PBXProject "Dday-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
