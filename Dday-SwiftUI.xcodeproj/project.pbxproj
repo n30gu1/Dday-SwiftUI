@@ -24,6 +24,7 @@
 		B22B12EC279ACB5E00CFAE18 /* ComplicationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B22B12EA279ACB5D00CFAE18 /* ComplicationsView.swift */; };
 		B22B12ED279ACFB500CFAE18 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */; };
 		B24C2FDC2382CE90004364CB /* DdayRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24C2FDB2382CE90004364CB /* DdayRow.swift */; };
+		B26D7267279C0579004748B5 /* GetDdayString.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26D7266279C0579004748B5 /* GetDdayString.swift */; };
 		B2BFAFCF238159B100FCA3D1 /* DateExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */; };
 		B2D2142623813858003B90BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142523813858003B90BE /* AppDelegate.swift */; };
 		B2D2142823813858003B90BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2D2142723813858003B90BE /* SceneDelegate.swift */; };
@@ -96,6 +97,7 @@
 		B22B12EA279ACB5D00CFAE18 /* ComplicationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationsView.swift; sourceTree = "<group>"; };
 		B238326124624B0C003703D2 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		B24C2FDB2382CE90004364CB /* DdayRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DdayRow.swift; sourceTree = "<group>"; };
+		B26D7266279C0579004748B5 /* GetDdayString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetDdayString.swift; path = ../../../../../../Downloads/GetDdayString.swift; sourceTree = "<group>"; };
 		B2BFAFCE238159B100FCA3D1 /* DateExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtention.swift; sourceTree = "<group>"; };
 		B2D2142223813858003B90BE /* SimpleDday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleDday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2D2142523813858003B90BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				B22B12C9279AA82500CFAE18 /* ComplicationController.swift */,
 				B22B12DF279ABFF800CFAE18 /* Persistence.swift */,
 				B22B12EA279ACB5D00CFAE18 /* ComplicationsView.swift */,
+				B26D7266279C0579004748B5 /* GetDdayString.swift */,
 				B22B12CB279AA82600CFAE18 /* Assets.xcassets */,
 				B22B12D0279AA82600CFAE18 /* Info.plist */,
 				B22B12CD279AA82600CFAE18 /* Preview Content */,
@@ -356,6 +359,7 @@
 				B22B12E9279AC93600CFAE18 /* Dday.swift in Sources */,
 				B22B12ED279ACFB500CFAE18 /* DateExtention.swift in Sources */,
 				B22B12EC279ACB5E00CFAE18 /* ComplicationsView.swift in Sources */,
+				B26D7267279C0579004748B5 /* GetDdayString.swift in Sources */,
 				B22B12E1279ABFF800CFAE18 /* Persistence.swift in Sources */,
 				B22B12E2279AC01800CFAE18 /* Dday_SwiftUI.xcdatamodeld in Sources */,
 				B22B12C8279AA82500CFAE18 /* Dday_SwiftUIApp.swift in Sources */,

@@ -33,7 +33,6 @@ struct ContentView: View {
                 }
                 .onTapGesture {
                     UserDefaults.standard.set("\(String(describing: dday.objectID.uriRepresentation().absoluteString))", forKey: "selectedID")
-                    print(UserDefaults.standard.string(forKey: "selectedID"))
                 }
             }
         }

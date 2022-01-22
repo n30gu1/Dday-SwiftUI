@@ -42,7 +42,18 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Population
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
-        if let template = makeTemplate(complication: complication) {
+        let dday: Dday? = {
+            let idString = UserDefaults.standard.string(forKey: "selectedID") ?? ""
+            if let url = URL(string: idString) {
+                print(url)
+                if let object = PersistenceController.shared.container.viewContext.persistentStoreCoordinator?.managedObjectID(forURIRepresentation: url) {
+                    return PersistenceController.shared.container.viewContext.object(with: object) as? Dday
+                }
+                return nil
+            }
+            return nil
+        }()
+        if let template = makeTemplate(dday: dday, complication: complication) {
             let entry = CLKComplicationTimelineEntry(
                 date: Date(),
                 complicationTemplate: template)
@@ -68,12 +79,26 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
 
 extension ComplicationController {
   func makeTemplate(
+    dday: Dday?,
     complication: CLKComplication
   ) -> CLKComplicationTemplate? {
     switch complication.family {
     case .graphicCircular:
       return CLKComplicationTemplateGraphicCircularView(
-        ComplicationViewCircular())
+        ComplicationViewCircular(
+            dday: dday
+        ))
+    case .graphicBezel:
+        let textProvider = CLKTextProvider(format: getDdayString(dday: dday))
+        return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: CLKComplicationTemplateGraphicCircularView(ComplicationViewCircularWithBezel(dday: dday)), textProvider: textProvider)
+    case .utilitarianLarge:
+        let textProvider = CLKTextProvider(format: getDdayString(dday: dday))
+        let imageProvider = CLKImageProvider(onePieceImage: UIImage(systemName: "calendar")!)
+        return CLKComplicationTemplateUtilitarianLargeFlat(textProvider: textProvider, imageProvider: imageProvider)
+    case .utilitarianSmall:
+        let textProvider = CLKTextProvider(format: getDdayString(dday: dday))
+        let imageProvider = CLKImageProvider(onePieceImage: UIImage(systemName: "calendar")!)
+        return CLKComplicationTemplateUtilitarianSmallFlat(textProvider: textProvider, imageProvider: imageProvider)
     default:
       return nil
     }
