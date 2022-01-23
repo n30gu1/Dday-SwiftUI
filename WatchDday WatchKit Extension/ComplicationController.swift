@@ -90,7 +90,9 @@ extension ComplicationController {
         ))
     case .graphicBezel:
         let textProvider = CLKTextProvider(format: getDdayString(dday: dday))
-        return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: CLKComplicationTemplateGraphicCircularView(ComplicationViewCircularWithBezel(dday: dday)), textProvider: textProvider)
+        return CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: CLKComplicationTemplateGraphicCircularView(ComplicationViewCircularWithBezel()), textProvider: textProvider)
+    case .graphicRectangular:
+        return CLKComplicationTemplateGraphicRectangularFullView(ComplicationViewGraphicRectangular(dday: dday))
     case .utilitarianLarge:
         let textProvider = CLKTextProvider(format: getDdayString(dday: dday))
         let imageProvider = CLKImageProvider(onePieceImage: UIImage(systemName: "calendar")!)

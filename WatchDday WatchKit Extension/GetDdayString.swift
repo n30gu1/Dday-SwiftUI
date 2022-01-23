@@ -8,12 +8,12 @@
 
 import Foundation
 
-func getDdayString(dday: Dday?) -> String {
+func calcDate(date: Date?) -> Int {
     let today = Calendar.current.date(bySettingHour: 0, minute: 0, second: 0, of: Date())
-    func calcDate(date: Date?) -> Int {
-        return date!.totalDistance(from: today!, resultIn: .day)!
-    }
-  
+    return date!.totalDistance(from: today!, resultIn: .day)!
+}
+
+func getDdayString(dday: Dday?) -> String {
     if let dday = dday {
         if dday.startFromDayOne {
             return "D+\(calcDate(date: dday.date) + 1)"

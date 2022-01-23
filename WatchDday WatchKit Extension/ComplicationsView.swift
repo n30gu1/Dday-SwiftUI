@@ -29,7 +29,6 @@ struct ComplicationViewCircular: View {
 }
 
 struct ComplicationViewCircularWithBezel: View {
-    let dday: Dday?
     let f: DateFormatter = {
         let f = DateFormatter()
         f.dateFormat = "EEE"
@@ -67,12 +66,63 @@ struct ComplicationCell: View {
     }
 }
 
+struct ComplicationViewGraphicRectangular: View {
+    let dday: Dday?
+    let f: DateFormatter = {
+        let f = DateFormatter()
+        f.dateFormat = "yyyy. M. d."
+        return f
+    }()
+    
+    
+    var body: some View {
+        if let dday = dday {
+            let upcomingAnniversary = compare(value: calcDate(date: dday.date))
+            let days = calcDate(date: dday.date)
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(dday.title ?? "nil Error")
+                        .bold()
+                    Text(f.string(from: dday.date ?? Date()))
+                        .font(.system(size: 12, weight: .regular, design: .rounded))
+                        .padding(.bottom, -10)
+                        .foregroundColor(.gray)
+                    Text("D+\(days)")
+                        .font(.system(size: 26, weight: .bold, design: .rounded))
+                }
+                Spacer()
+                VStack(alignment: .trailing) {
+                    Text("D+\(upcomingAnniversary)")
+                    Text(f.string(from: Date().addingTimeInterval(TimeInterval(upcomingAnniversary) * 86400)))
+                        .font(.system(size: 12, weight: .regular, design: .rounded))
+                        .padding(.bottom, -10)
+                    Text(String(format: "%.0f%%", Double(days)/Double(upcomingAnniversary)*100))
+                        .font(.system(size: 26, weight: .bold, design: .rounded))
+                }
+            }
+        } else {
+            Text("No Dday Selected")
+        }
+    }
+}
+
+func compare(value: Int) -> Int {
+    let criteria = [50, 100, 200, 300, 500, 1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 365, 365*2, 365*3, 365*4, 365*5, 365*6].sorted()
+    for i in 0...criteria.count-1 {
+        if (i == 0 ? 0 : criteria[i-1]) < value && value < criteria[i] {
+            return criteria[i]
+        }
+    }
+    return 0
+}
+
 
 struct ComplicationsView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CLKComplicationTemplateGraphicCircularView(ComplicationViewCircular(dday: nil)).previewContext()
-            CLKComplicationTemplateGraphicCircularView(ComplicationViewCircularWithBezel(dday: nil)).previewContext()
+            CLKComplicationTemplateGraphicBezelCircularText(circularTemplate: CLKComplicationTemplateGraphicCircularView(ComplicationViewCircularWithBezel()), textProvider: CLKTextProvider(format: "None")).previewContext()
+            CLKComplicationTemplateGraphicRectangularFullView(ComplicationViewGraphicRectangular(dday: nil)).previewContext()
         }
     }
 }
