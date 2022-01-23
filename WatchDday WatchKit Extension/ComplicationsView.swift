@@ -78,7 +78,7 @@ struct ComplicationViewGraphicRectangular: View {
     var body: some View {
         if let dday = dday {
             let upcomingAnniversary = compare(value: calcDate(date: dday.date))
-            let days = calcDate(date: dday.date)
+            let days = calcDate(date: dday.date) + 1
             HStack {
                 VStack(alignment: .leading) {
                     Text(dday.title ?? "nil Error")
@@ -87,17 +87,19 @@ struct ComplicationViewGraphicRectangular: View {
                         .font(.system(size: 12, weight: .regular, design: .rounded))
                         .padding(.bottom, -10)
                         .foregroundColor(.gray)
-                    Text("D+\(days)")
+                    Text(getDdayString(dday: dday))
                         .font(.system(size: 26, weight: .bold, design: .rounded))
                 }
                 Spacer()
-                VStack(alignment: .trailing) {
-                    Text("D+\(upcomingAnniversary)")
-                    Text(f.string(from: Date().addingTimeInterval(TimeInterval(upcomingAnniversary) * 86400)))
-                        .font(.system(size: 12, weight: .regular, design: .rounded))
-                        .padding(.bottom, -10)
-                    Text(String(format: "%.0f%%", Double(days)/Double(upcomingAnniversary)*100))
-                        .font(.system(size: 26, weight: .bold, design: .rounded))
+                if dday.startFromDayOne {
+                    VStack(alignment: .trailing) {
+                        Text("D+\(upcomingAnniversary)")
+                        Text(f.string(from: dday.date!.addingTimeInterval(TimeInterval(upcomingAnniversary) * 86400 - 86400)))
+                            .font(.system(size: 12, weight: .regular, design: .rounded))
+                            .padding(.bottom, -10)
+                        Text(String(format: "%.0f%%", Double(days)/Double(upcomingAnniversary)*100))
+                            .font(.system(size: 26, weight: .bold, design: .rounded))
+                    }
                 }
             }
         } else {

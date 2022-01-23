@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import ClockKit
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var viewContext
@@ -33,6 +34,12 @@ struct ContentView: View {
                 }
                 .onTapGesture {
                     UserDefaults.standard.set("\(String(describing: dday.objectID.uriRepresentation().absoluteString))", forKey: "selectedID")
+                    let server = CLKComplicationServer.sharedInstance()
+                    if let complications = server.activeComplications {
+                        for complication in complications {
+                            server.reloadTimeline(for: complication)
+                        }
+                    }
                 }
             }
         }
